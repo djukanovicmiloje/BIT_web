@@ -1,0 +1,56 @@
+#first {
+background: yellow;
+border-width: 5px;
+border-style: dashed;
+border-color: red;
+width:500px;
+
+
+
+
+}
+#second {
+    background: yellow;
+    border-width: 5px;
+    border-style: solid;
+    border-color: green;
+    width:500px;
+    
+   
+
+
+}
+#third {
+   
+    background:gold;
+    border-width: 5px;
+    border-style: dashed;
+    border-color:red;
+    width:500px;
+    
+
+}
+#naslov {
+    width:960px;
+    margin:50px auto;
+    padding:50px;
+    background:red;
+    text-align: center;
+    font-size:50px;
+    font-family: 'Pacifico', cursive;
+    color:gold;
+    -webkit-box-shadow: 54px -45px 77px 14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 54px -45px 77px 14px rgba(0,0,0,0.75);
+    box-shadow: 54px -45px 77px 14px rgba(0,0,0,0.75);
+    border: 5px solid black;
+    border-radius: 50px;
+}
+.paragraf {
+    margin:auto;
+    display: inline-block;
+    margin: 30px 55px;
+}
+#div{
+   width:2000px;
+    margin:auto;
+}
