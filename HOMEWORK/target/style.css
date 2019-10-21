@@ -1,0 +1,37 @@
+*{
+ padding: 0px;
+ margin: 0px;
+ font-family: sans-serif;
+}
+.textPrekoSlike{
+ width: 500px;
+ height: 500px;
+ display: inline-block;
+ margin: 20px; 
+ border-radius: 20px;
+ box-shadow: 0px 0px 10px rgba(0,0,0);
+ line-height: 500px;
+ text-align: center;
+ font-size: 200px; 
+ position: relative;
+ background: grey;
+}
+#prvi {
+ /*background:#ff0000;*/
+ color: #272121;
+ 
+}
+
+#drugi {
+ /*background: #ff4d00;*/
+ color:#272121;
+}
+:target {
+ background: yellow;
+}
+a {
+ position: absolute;
+ display: block;
+ width: 100%;
+ height: 100%;
+}

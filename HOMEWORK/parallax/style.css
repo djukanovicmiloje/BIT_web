@@ -1,0 +1,44 @@
+*{
+ margin: 0px;
+ padding: 0px;
+ font-family: sans-serif;
+}
+#prvi {
+ background-image: url(./1.jpeg);
+}
+#drugi {
+ background-image: url(./2.jpg);
+}
+.parallax { 
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ background-attachment: fixed;
+ width: 100%;
+ height: 500px;
+ margin: 0px auto;
+ line-height: 500px;
+ text-align: center;
+ font-size: 200px;
+ color: rgba(243, 211, 211, 0.5);
+ 
+}
+.tekst {
+ background: #f3d3d3;
+ color: #010a43;
+ padding: 70px 0px;
+
+}
+.tekst>p {
+ width: 40%;
+ margin: 0px auto;
+ text-align: justify;
+ height: 600px;
+ overflow: hidden;
+}
+.tekst>h1 {
+width: 40%;
+margin: auto;
+margin-bottom: 30px;
+font-size: 40px;
+}

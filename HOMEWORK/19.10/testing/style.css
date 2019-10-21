@@ -1,0 +1,43 @@
+*{
+ padding:0;
+ margin:0;
+ box-sizing: border-box;
+
+}
+div{
+ width:200px;
+ height:200px;
+ position:absolute;
+}
+#p{
+ background-color: red; 
+ left:0px;
+ top:0px;
+ border:10px solid black;
+ display:inline-block;
+ position: relative;
+ top:-10px;
+ left:-10px;
+ 
+}
+#p:hover{
+ background-color: black;
+}
+#d{
+ background-color: green;
+ left:0px;
+ bottom:10px;
+ outline:10px solid black;
+}
+#t{
+ background-color:blue;
+ top:50%;
+ left:50%;
+ transition-duration: 1s;
+ transform:translate(-50%,-50%)  
+ 
+}
+#t:hover{
+ transform: rotate(45deg);
+
+}

@@ -1,0 +1,33 @@
+*{
+ font-family: Arial, Helvetica, sans-serif;
+}
+td img{
+ height: 100px;
+}
+table {
+ border-collapse:collapse ;
+ text-align: center;
+
+ 
+ margin: auto;
+}
+td {
+ padding: 10px 0px;
+}
+
+tr:nth-child(odd){
+ background-color:grey ;
+}
+
+tr:hover{
+ background-color: orange;;
+}
+tr:first-child{
+ background-color: red;
+ font-weight: 700;
+ color:white;
+ 
+}
+tr:first-child td{
+ padding: 10px 10px;
+}

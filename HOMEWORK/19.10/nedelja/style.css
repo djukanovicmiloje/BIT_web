@@ -1,0 +1,214 @@
+* {
+  padding:0;
+  margin:0;
+  font-family: sans-serif;  
+  
+}
+html {
+ scroll-behavior: smooth;
+}
+#pocetna{
+ background-image: url(./img/bright-clouds-color-1294229.jpg);
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ height:100vh;
+}
+#meni{ 
+ position: absolute; 
+ width:600px;
+ top:10%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ z-index:100;
+}
+#meni ul{
+ list-style: none;
+}
+
+.pad,.pad_pad{
+ visibility: hidden;
+ opacity: 0;
+ transition: opacity 1s ;
+  
+ 
+ 
+}
+li:hover{
+ background-color:#b063c5;
+}
+li:hover .pad, .pad>li:hover .pad_pad{
+ visibility: visible;
+ opacity: 1;
+ 
+}
+li {
+ transition: 1s;
+ background-color: #f3d3d3; 
+ color:#1a2849;
+ font-weight: bold; 
+ box-sizing: border-box ;
+ /*border:2px solid #c400ce;*/
+ display: inline-block; 
+ float:right;
+ text-align: center;
+ height:50px;
+ line-height: 50px;
+ width:150px;
+ position: relative;
+}
+li::before{
+ transition: 0.5s;
+ opacity:0;
+ visibility: hidden;
+ content:"";
+ position:absolute;
+ left:0px;
+ transform:translate(0%,-50%);
+ top:50%;
+ height:40px;
+ width:0px;
+ background-color: #ffa069 ;
+}
+li:hover:before{
+ visibility: visible;
+ opacity:1;
+ width:5px;
+}
+
+.pad_pad{
+ position:relative;
+ right:-150px;
+ top:-50px;
+}
+#tile{
+ position:absolute;
+ top:50%;
+ left:50%;
+ transform:translate(-50%,-50%);
+ font-size:100px;
+ color:#f3d3d3;
+ z-index:1;
+ transition-duration: 1s;
+}
+#wiki{ 
+ position:absolute;
+ bottom:20%;
+ left:50%;
+ transform:translate(-50%,-50%);
+ text-decoration: none;
+ text-align: center;
+ font-weight: 900;
+ background-color:#f3d3d3;
+ color:#1a2849; 
+ width:200px;
+ height:50px;
+ line-height: 50px;
+ text-transform: uppercase;
+ overflow: hidden; 
+}
+#wiki:hover{
+ outline:5px solid #ffa069;
+}
+#wiki::before{
+ visibility: hidden;
+ content:"";
+ position: absolute;
+ height:50px;
+ width:50px;
+ transform:rotate(45deg) ;
+ /*transform:translate(-50%,-50%);*/
+ left:-25px;
+ top:0%;
+ background-color:#ffa069; 
+}
+#wiki:hover:before{
+ visibility: visible;
+}
+#page{
+ position:fixed;
+ right:50px;
+ bottom:50px;
+ text-decoration: none;
+ width:200px;
+ height:50px;
+ line-height: 50px;
+ background-color:#f3d3d3;
+ color: #1a2849;
+ text-align: center;
+ font-weight: 900;
+}
+#page:hover{
+ outline:5px solid #ffa069;
+}
+form{
+ position: absolute;
+ right:50%;
+ transform:translate(50%,0%);
+ width:300px;
+ height:450px;
+ background-color:#f3d3d3;
+ margin: 200px 0;
+ outline:5px solid #1a2849;
+}
+#avatar{
+ background:#1a2849;
+ position: absolute;
+ transform: translate(-50%,-50%);
+ width:140px;
+ height: 140px;
+ top:0px;
+ left:50%;
+ border-radius:50%;
+}
+#avatar p{
+ position:absolute;
+ width:100%;
+ top:50%;
+ transform:translate(0%,-50%);
+ text-align: center;
+ line-height: 140px;
+ font-size:100px;
+ color:#f3d3d3;
+ font-weight:bold;
+}
+#naslov{
+ position: absolute;
+ color: #1a2849;
+ text-align: center;
+ font-weight: 900;
+ top:100px;
+ width:100%;
+ font-size:25px;
+}
+input{
+ background:none;
+ border:none;
+ outline:none;
+ width:60%;
+ position: relative;
+ left:50%;
+ transform: translate(-50%,0%);
+ border-bottom:3px solid #1a2849 ;
+}
+#user{
+ top:200px;  
+}
+#pass{
+ top:250px;
+}
+::placeholder{
+ color:#1a2849;
+ font-weight: bold;
+}
+#dugme{
+ top:300px;
+ background:#1a2849;
+ color:#f3d3d3;
+ height:30px;
+ line-height: 30px;
+ font-weight: bold;
+}
+#tile:hover{
+ color:#ffa069;
+}
