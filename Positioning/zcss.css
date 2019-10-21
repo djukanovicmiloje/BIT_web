@@ -1,0 +1,83 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    padding-bottom:500px;
+}
+#prvi {
+    background:red;
+    width: 200px;
+    height:200px;
+}
+#drugi {
+    background:green;
+    width: 200px;
+    height:200px;
+}
+#treci {
+    background:blue;
+    width: 200px;
+    height:200px;
+}
+#prvi2 {
+    position:relative;
+    background:red;
+    width: 200px;
+    height:200px;
+    z-index: 7;
+}
+#drugi2 {
+    background:green;
+    width: 200px;
+    height:200px;
+    position:relative;
+    top:-100px;
+    left:100px;
+    z-index: 10;
+}
+#treci2 {
+    background:blue;
+    width: 200px;
+    height:200px;
+    position:relative;
+    top:-200px;
+    left:200px;
+    z-index: 5;
+}
+#neki {
+    position: relative;
+}
+#neki div{
+    position:absolute;
+    
+}
+#prvi3 {
+    background:red;
+    width: 200px;
+    height:200px;
+    top:0px;
+    right:0px;
+    z-index: 3;
+}
+#drugi3 {
+    background:green;
+    width: 200px;
+    height:200px;
+    top:100px;
+    right:100px;
+    z-index: 2;
+
+}
+#treci3 {
+    background:blue;
+    width: 200px;
+    height:200px;
+    top:200px;
+    right:200px;
+    z-index: 1;
+
+}
+hr {
+    margin:10px 0px;
+}
