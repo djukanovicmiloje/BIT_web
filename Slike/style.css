@@ -1,0 +1,23 @@
+p {
+    width: 200px;fgfhhgfhgd
+    margin: auto;
+}
+
+h2{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+body{
+    background-image: url(./imgs/pozadina2.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+
+
+}
+*{
+    color: #bada55;
+}
