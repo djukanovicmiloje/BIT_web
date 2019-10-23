@@ -1,44 +1,144 @@
-*{
- margin: 0px;
- padding: 0px;
- font-family: sans-serif;
- list-style: none;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  list-style: none;
 }
 .clearfix::after {
- content: "";
- clear: both;
- display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
-body, html {
- width: 100%;
- height: 100%; 
+body,
+html {
+  width: 100%;
+  height: 100%;
 }
 .container {
- width: 100%;
- max-width: 960px;
- margin: 0px auto;
- position: relative; 
+  width: 100%;
+  max-width: 960px;
+  margin: 0px auto;
+  position: relative;
 }
-#header{
- height: 150px;
- width: 100%;
+#header {
+  /*height: 100px;*/
+  width: 100%;
+  position: relative;
 }
-#header p{
- float: left;
- line-height: 150px;
- font-size: 50px;
- padding: 0px 10px;
+#header p {
+  float: left;
+  line-height: 100px;
+  font-size: 30px;
+  padding-left: 5px;
 }
- .item{
- float: right;
- padding: 10px;
- font-size: 40px;
- position: relative;
- top: 50%;
- transform: translate(0% , -50%);
- color: lightblue;
+#meni {
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
-.item:hover{
- background: lightblue;
- color: white;
+.item {
+  display: inline-block;
+  padding: 4px;
+  font-size: 15px;
+  color: #428bca;
+  margin-left: 3px;
+  border-radius: 7%;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 40px 0px;
+}
+.about {
+  margin-right: 20px;
+}
+.item:hover {
+  background: #428bca;
+  color: white;
+}
+#img {
+  border: 1px solid lightgray;
+  border-radius: 1%;
+  margin-bottom: 5px;
+}
+#img img {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3%;
+}
+.tab {
+  width: 32%;
+  margin-top: 30px;
+  float: right;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+.centralni {
+  margin: 30px 2%;
+}
+.tab img {
+  display: block;
+  width: 100%;
+}
+.tekst {
+  padding: 10px 0px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .tab * {
+    float: left;
+  }
+  .container {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .tab img {
+    width: 40%;
+  }
+  .tab p {
+    width: 60%;
+  }
+  .tab {
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 1%;
+    padding: 10px;
+    margin: 10px 0px;
+  }
+  .centralni {
+    margin: 10px 0px;
+  }
+  .tekst {
+    padding: 0px 10px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+  }
+}
+@media screen and (max-width: 320px) {
+  .tab img {
+    width: 100%;
+  }
+  .tab p {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    transform: translate(0%, 0%);
+    overflow: hidden;
+  }
+  #meni {
+    position: relative;
+  }
+  .item {
+    width: 100%;
+    display: block;
+    margin: 0px;
+    border: 1px solid lightgray;
+    border-radius: 0px;
+  }
 }
