@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/9332210/why-is-one-div-overlapping-another-div Mapa na projektu
+:checked ~ burger
+border-box set width then add padding collapses content
