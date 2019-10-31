@@ -1,0 +1,141 @@
+.zvezdica span {
+  position: relative;
+  bottom: 0.3em;
+  font-weight: bolder;
+  font-size: 2em; }
+
+.zvezdica i {
+  display: inline; }
+
+.zvezdica {
+  text-align: center; }
+
+.nav {
+  float: right; }
+
+.meni {
+  color: white;
+  width: 100%;
+  padding: 5px;
+  text-align: center; }
+
+.meni a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px; }
+
+.ds {
+  padding: 0px; }
+
+.bg {
+  background-color: #1a2732; }
+
+.profile {
+  background: #00bc9c;
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
+.profile img {
+  display: block;
+  margin: auto; }
+
+.head h1 {
+  color: white;
+  display: block;
+  margin: 0 auto; }
+
+.line {
+  border-bottom: 5px solid red; }
+
+.star {
+  display: block;
+  color: white;
+  text-align: center; }
+
+#decor {
+  display: block;
+  margin: 0 auto; }
+
+.line1 {
+  display: block;
+  border: 2px solid white;
+  width: 55px;
+  margin-left: 46%;
+  position: relative;
+  top: 10px; }
+
+.line2 {
+  display: block;
+  border: 2px solid white;
+  width: 55px;
+  margin-left: 51%;
+  position: relative;
+  bottom: 10px; }
+
+#podnaslov {
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  padding-top: 8px; }
+
+/* ---------- SECTION 3 ---------- */
+.head3 h2 {
+  color: black;
+  font-size: 20px;
+  margin: 0 auto; }
+
+#port {
+  text-align: center; }
+
+.slika img {
+  width: 100%;
+  margin-bottom: 1em; }
+
+#slike {
+  margin: 0 10%; }
+
+/* ---------- SECTION 4 ---------- */
+.section4 {
+  padding: 0 20%;
+  background: #00bc9c;
+  color: white; }
+
+.find {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  float: none;
+  width: 5em;
+  margin-bottom: 2em; }
+
+.text {
+  padding-bottom: 2em; }
+
+/* ---------- SECTION 5 ---------- */
+.section5 {
+  margin-bottom: 5em; }
+
+.message {
+  height: 8em; }
+
+/* ---------- FOOTER ---------- */
+.footer {
+  padding: 0 20%;
+  background-color: #1a2732;
+  color: white;
+  /* height: 20em; */ }
+
+.footer h2 {
+  margin: 1em 0;
+  text-align: center; }
+
+.footer i {
+  border-radius: 50%; }
+
+.copy {
+  padding: 2em 0;
+  text-align: center; }
+
+/*# sourceMappingURL=main.css.map */
