@@ -1,0 +1,132 @@
+.row{
+    margin: 0 !important;
+}
+span{
+    color: orange;
+}
+/* ======================FIRST==================== */
+#top {
+    background-image: url("./img/main-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+#title {
+    margin: 15em 0;
+}
+#logo {
+    font-size: 5rem;
+}
+#menu {
+    justify-content: space-between
+}
+/* ======================DESIGNS==================== okrugli div preko kog stoji slika */
+#designs {
+    padding: 10rem 0;
+}
+.circle{  
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative; 
+    margin: 2em auto;
+}
+.circle img{
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+/* ======================SUBSCRIBE==================== */
+#subscribe {
+    background-image: url("./img/newsletter-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;  
+    padding: 10em 0;
+}
+#subscribe input{
+    background: white;
+    padding: 1em;
+    border-radius: 1em;
+    border: none;
+}
+#subscribe button{
+    border-radius: 1em;
+    border: none;
+    text-transform: uppercase;
+    background: orangered;
+}
+/* ======================OUR WORKS==================== */
+.project_card{
+    position: relative;
+    padding: 0;
+    border-radius: 1em;
+    /* margin: 1em; */
+}
+#our_works p{
+    text-align: center;
+}
+.project_card img{
+    width: 100%;
+}
+.project_details{
+    width: 100%;
+    padding-top: 100%;
+    /* position: relative; */
+    position: absolute;
+    border-radius: 1em;
+    bottom: 0;
+    background:rgba(255,140,0,0.5);
+    opacity: 0;
+    transition: opacity 1s; 
+}
+.project_card:hover .project_details{
+    opacity: 1;
+}
+.hidden{
+    position: absolute;
+    bottom: 0;
+}
+.hidden h3{
+    text-align: center;
+    margin: 5em 0;
+}
+.hidden a{
+    display: block;
+    text-align: center;
+    margin: 2em 0;
+    background: red;
+    width: 50%;
+    margin: 2em auto;
+    padding: 0.5em;
+    text-decoration: none;
+    color: white;
+    border-radius: 1em;
+    text-transform: uppercase;
+}
+.hidden p{
+    padding: 2em;
+    margin: 1em 0;
+}
+/* ======================TESTAM==================== */
+#quote{
+    background-image: url("./img/testimonials-background.jpg");
+}
+#quote img{
+    width: 100px;
+}
+.person_card  img{
+    width: 100%;
+}
+.person_card h2{
+    text-align: center;
+}
+.person_card{
+    margin: 3em 0;
+}
+#avatar{
+    width:
+}
