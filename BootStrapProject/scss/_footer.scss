@@ -1,0 +1,43 @@
+#footer {
+  background: $blueish;
+  color: white;
+  text-align: center;
+}
+.footer_item {
+  padding-bottom: 3em;
+}
+#footer i {
+  font-size: 1.5rem;
+}
+.footer_item i {
+  height: 2em;
+  width: 2em;
+  border: 1px solid;
+  border-radius: 50%;
+  position: relative;
+  margin: 0.3em;
+}
+.fa-facebook-f:before,
+.fa-google-plus-g:before,
+.fa-linkedin-in:before,
+.fa-twitter:before {
+  @include center();
+}
+#footer h3 {
+  padding: 1em 0;
+  font-weight: 900;
+}
+.copyright {
+  font-size: 0.8em;
+}
+.thanks {
+  font-size: 0.6em;
+  padding-bottom: 2em;
+  color: #909090;
+}
+.footer_item a {
+  color: white;
+}
+.footer_item a:hover {
+  color: $greenish;
+}

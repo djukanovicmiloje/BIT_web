@@ -1,0 +1,37 @@
+.star {
+  text-align: center;
+  position: relative;
+  height: 4em;
+}
+.star i {
+  position: absolute;
+  font-size: 1.5em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $blueish;
+}
+.lines::before,
+.lines::after {
+  @include star_lines($blueish);
+}
+.lines::before {
+  left: 50%;
+  transform: translateX(1em);
+}
+.lines::after {
+  right: 50%;
+  transform: translateX(-1em);
+}
+#master_heading .lines::before,
+#master_heading .lines::after {
+  @include star_lines(white);
+}
+#about .lines::before,
+#about .lines::after {
+  @include star_lines(white);
+}
+#master_heading i,
+#about i {
+  color: white;
+}

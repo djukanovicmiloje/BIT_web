@@ -1,0 +1,57 @@
+#menu {
+  background: $blueish;
+}
+#collapse_target {
+  justify-content: flex-end !important;
+  order: 3;
+}
+.nav-item a {
+  text-align: left;
+}
+.navbar {
+  justify-content: space-between !important;
+}
+.nav-link {
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.navbar-toggler {
+  order: 2 !important;
+  outline: none !important;
+}
+.navbar-text {
+  order: 1 !important;
+}
+
+.nav-link:hover {
+  color: $greenish;
+}
+.navbar-text {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2em;
+}
+.navbar-toggler {
+  background: $greenish;
+  color: white;
+  height: 3em;
+  font-weight: bold;
+}
+.navbar-toggler-icon {
+  height: 2em;
+}
+.navbar-toggler img {
+  height: 2em;
+  width: 2em;
+}
+#toggler_title {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+}
+.bnt_clicked {
+  background: $blueish;
+  border: 2px solid white;
+}

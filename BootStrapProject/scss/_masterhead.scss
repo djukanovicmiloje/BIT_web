@@ -1,0 +1,25 @@
+#master_heading {
+  background: $greenish;
+  color: white;
+}
+#master_heading h1 {
+  font-size: 5rem;
+}
+#master_heading h4 {
+  padding-bottom: 5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+#master_heading img {
+  margin: 6rem 0 2rem 0;
+}
+@media (max-width: 768px) {
+  #master_heading h1 {
+    font-size: 2.5rem;
+  }
+  #master_heading h4 {
+    padding-bottom: 5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+}

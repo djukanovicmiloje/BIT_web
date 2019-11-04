@@ -1,0 +1,22 @@
+#about{
+ background: $greenish;
+ color: white;
+}
+#about a{
+ color: white;
+}
+.about_text{
+ font-weight: bold;
+ padding-bottom: 1em;
+}
+.btn{
+ border: 2px solid white;
+ text-transform: capitalize;
+ color:white;
+ font-size: 1.2em;
+ margin-top: 2em;
+ font-weight: bold;
+}
+.btn:hover{
+ color: white; 
+}

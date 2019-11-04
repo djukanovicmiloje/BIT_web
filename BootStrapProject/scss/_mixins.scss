@@ -1,0 +1,15 @@
+@mixin star_lines($color) {
+  content: "";
+  display: block;
+  width: 6em;
+  height: 0.2em;
+  background: $color;
+  position: absolute;
+  top: 50%;
+}
+@mixin center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
