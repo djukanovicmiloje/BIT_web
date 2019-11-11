@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet" href="./style.css">
+ </head>
+ <body>
+  <div class="screen"  id="welcomeScreen">
+   <h1>Target Game</h1>
+   <div class="point_scale" id="red">10pts</div>
+   <div class="point_scale" id="green">5pts</div>
+   <div class="point_scale" id="blue">1pt</div>
+   <p>click to start the game</p>
+  </div>
+  <div class="screen" id="gameScreen">
+   <p>click to shoot</p>
+   <div id="score_board"></div>
+   <div id="first" class="target_circle"></div>
+   <div id="second" class="target_circle"></div>
+   <div id="third" class="target_circle"></div>   
+  </div>
+  <div class="screen" id="score">
+   <input id="name" type="text" placeholder="your name">
+   <div class="btn" id="addToHighScore"> Add to high score list</div>
+   <div class="btn" id="highScoreBtn"> High score list</div>
+   <div class="btn" id="again">Play again</div>
+   <div class="btn" id="reset">Reset Score Board</div>
+  </div>
+  <div class="screen" id="highScoreScreen">
+   <h1>High Score List</h1>
+    <div class="btn" id="again2">Play again</div>
+  </div>
+  <script src="./main.js"></script>
+ </body>
+</html>

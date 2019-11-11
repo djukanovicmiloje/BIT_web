@@ -1,0 +1,58 @@
+#background_btn, #off_btn{
+ background-color: red;
+ color: white;
+ height: 3em;
+ line-height: 3em;
+ text-align: center;
+ width: 15em;
+ display: block;
+ margin: 2em auto;
+ border: none;
+ font-family: sans-serif;
+ font-weight: bold;
+}
+.blue{
+ background-color: lightblue;
+}
+.red{
+ background-color: lightcoral ;
+}
+.test{
+ height: 200px;
+ width: 200px;
+}
+#chat{
+ width: 400px;
+ height: 500px;
+ background-color: white;
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ 
+}
+#msg_box, #send_btn{
+ position: absolute;
+ bottom: 0;
+ box-sizing: border-box;
+ padding: 0.5em;
+ border: none;
+ outline: none;
+}
+#msg_box{
+ left: 0;
+ width: 80%;
+}
+#send_btn{
+ right: 0;
+ width: 20%;
+ background-color: red;
+ color: white;
+
+}
+.msg{ 
+ background-color: #808080;
+  
+ padding: 1em;
+ border-radius: 10px;
+ margin: 0.5em;
+}

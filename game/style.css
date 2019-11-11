@@ -1,0 +1,202 @@
+*{
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+ font-family: sans-serif;
+}
+.screen{
+ height: 800px;
+ width: 800px;
+ position: absolute;
+ background-color: black;
+ color: white;
+}
+#welcomeScreen{
+ z-index: 500;
+}
+#welcomeScreen h1{
+ text-align: center;
+ font-size: 80px;
+ margin: 70px;
+}
+#welcomeScreen p{
+ text-align: center;
+ position: absolute;
+ font-size: 40px;
+ bottom: 80px;
+ left: 50%;
+ transform: translateX(-50%);
+}
+.point_scale{
+ width: 100px;
+ height: 100px;
+ line-height: 100px;
+ text-align: center;
+ font-size: 20px;
+ border-radius: 50%;
+ margin: 20px auto;
+}
+#red{
+ background-color: red;
+}
+#green{
+ background-color: green;
+}
+#blue{
+ background-color: blue;
+}
+#gameScreen{ 
+ z-index: 100; 
+}
+#highScoreScreen{ 
+ z-index: 10;
+}
+#score{
+ z-index: 0;
+}
+
+#target{
+ width: 10px;
+ height: 10px;
+ background-color: black;
+ border-radius: 50%;
+ position: absolute;
+ z-index: 1000;
+}
+.target_circle{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ border: 2px solid white;
+ border-radius: 50%;
+ transform: translate(-50%,-50%);
+ 
+}
+#first{
+ width: 100px;
+ height: 100px;
+ z-index: 300;
+ background-color: red;
+}
+#second{
+ width: 300px;
+ height: 300px;
+ z-index: 200;
+ background-color: blue;
+}
+#third{
+ width: 500px;
+ height: 500px;
+ z-index: 100;
+ background-color: green;
+}
+#score_board{
+ position: absolute;
+ bottom: 0;
+}
+.shot{
+ width: 10px;
+ height: 10px;
+ background-color: white;
+ border-radius: 50%;
+ position: absolute;
+ z-index: 1000;
+}
+table{
+ border-collapse: collapse;
+}
+
+td{
+ padding: 10px;
+ /* width: 300px; */
+ border: 1px solid white;
+}
+/* .single_shot{
+ border-left: none;
+ border-right: none;
+} */
+td:nth-child(1){
+ border-right: none;
+}
+td:nth-child(3){
+ border-left: none;
+}
+.btn{
+ width: 200px;
+ height: 50px;
+ background-color: red;
+ line-height: 50px;
+ font-size: 20px;
+ border-radius: 5px;
+ text-align: center;
+ position: absolute;
+ top: 45%;
+ cursor: pointer;
+
+}
+#again2{
+ top: 80%;
+ left: 50%;
+ transform: translateX(-50%);
+}
+#name{
+ width: 200px;
+ height: 50px;
+ font-size: 25px;
+ border: none;
+ outline: none;
+ position: absolute;
+ top: 25%;
+ left: 50%;
+ transform: translateX(-50%);
+ background: transparent;
+ border-bottom: 2px solid red;
+ color: white;
+}
+.total{
+ position: absolute;
+ top: 10%;
+ left: 50%;
+ transform: translateX(-50%);
+ text-transform: uppercase;
+ font-size: 25px;
+}
+#addToHighScore{
+ left: 30%;
+ transform: translateX(-50%); 
+}
+#highScoreBtn{
+ right: 30%;
+ transform: translateX(50%); 
+}
+#again{
+ left: 30%;
+ transform: translateX(-50%);
+ top: 60%; 
+}
+#reset{
+ right: 30%;
+ transform: translateX(50%);
+ top: 60%; 
+}
+.liveScore{
+ font-size: 2em;
+ color: white;
+}
+#gameScreen p{
+ font-size: 40px;
+ text-align: center;
+ text-transform: uppercase;
+ margin-top: 1em;
+}
+table{
+ position: absolute;
+ top: 20%;
+ left: 50%;
+ transform: translateX(-50%);
+ font-size: 1.5em;
+}
+#highScoreScreen h1{
+ text-align: center;
+ margin-top: 1em;
+}

@@ -1,0 +1,28 @@
+*{
+ margin: 0;
+ padding: 0;
+}
+#field{
+ background-image: url("./images/field.png");
+ background-size: cover;
+ background-repeat: no-repeat;
+ width: 100vw;
+ height: 100vh;
+ position: relative;
+}
+#player{
+ background-image: url("./images/player.png");
+ background-size: cover;
+ background-repeat: no-repeat;
+ height: 100px;
+ width: 100px;
+ position: absolute;
+ transform: translate(-50%,-50%);
+}
+#stop{
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ padding: 1em;
+ margin: 1em;
+}

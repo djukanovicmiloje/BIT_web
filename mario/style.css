@@ -1,0 +1,29 @@
+*{
+ margin: 0;
+ padding: 0;
+}
+#cont{
+ width: 852px;
+ height: 480px;
+ overflow: hidden;
+ position: relative;
+}
+.back_drop{
+ width: 852px;
+ height: 480px;
+ background-image: url("./images/bg.jpg");
+ position: absolute;
+}
+.mario{
+ width: 128px;
+ height: 152px;
+ position: absolute;
+ background-image: url("./images/mario.png");
+ background-size: cover;
+ left: 50%;
+ transform: translateX(-70%);
+ bottom: 90px;
+}
+.running{
+ background-image: url("./images/mario_running.gif"); 
+}
