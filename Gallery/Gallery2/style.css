@@ -1,0 +1,11 @@
+.selected{
+    border: 5px solid red;
+}
+.gallery{
+    width: 900px;
+    margin: 50px auto;
+    border: 5px solid green;
+}
+*{
+    box-sizing: border-box;
+}
