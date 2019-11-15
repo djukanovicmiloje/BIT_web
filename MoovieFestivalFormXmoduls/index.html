@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Movie Festival Form</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <h1>Movie</h1>
+  <section id="createMovie">
+
+    <label for="movieTitle">Title:</label>
+    <input type="text" id="movieTitle">
+
+    <label for="movieLength">Length (min):</label>
+    <input type="number" id="movieLength">
+
+    <label for="movieGenre">Genre:</label>
+    <select id="movieGenre">
+      <!-- JS ADDING OPTIONS  -->
+    </select>
+
+    <h4>Movies:</h4>
+    <ul id="movieList"></ul>
+    <button id="createMovieBtn">Create Movie</button>
+  </section>
+  <h1>Program</h1>
+  <section id="createProgram">
+
+    <label for="programName">Name:</label>
+    <input type="text" id="programName">
+
+    <label for="programDate">Date:</label>
+    <input id="programDate" type="date">
+    <h4>Select movies:</h4>
+    <div id="movieOptions">
+      <!-- JS ADDING OPTIONS  -->
+    </div>
+    <h4>Programs:</h4>
+    <ul id="programList"></ul>
+    <button id="createProgramBtn">Create Program</button>
+
+    <select id="chooseProgram"></select>
+    <select id="chooseMovieToAdd"></select>
+    <button id="addMovieToProgram">Add selected movie to selected program</button>
+
+  </section>
+  <h1>Festival</h1>
+
+
+  <section id="createFestival">
+    <label for="festivalName">Name:</label>
+    <input type="text" id="festivalName">
+
+    <h4>Select programs:</h4>
+    <div id="programOptions">
+      <!-- JS ADDING OPTIONS  -->
+    </div>
+    <ul id="festivalList"></ul>
+    <button id="createFestivalBtn">Create Festival</button>
+  </section>
+
+  <script src="./js/entities.js"></script>
+  <script src="./js/form.js"></script>
+</body>
+
+</html>
