@@ -21,73 +21,89 @@ const uiModule = (function () {
         return $show;
 
     }
-    function generateInfoScreen(id, getData) {
+    function createShowScreen(showList) {
+        $shows = $('<div>');
+        $shows.attr('id', 'shows');
 
-        getData(id, function (show) {
+        for (let i = 0; i < showList.length; i++) {
+            let $show = createShowElement(showList[i]);
+            $show.attr('id', `${showList[i].id}`);
+            $shows.append($show);
+        }
 
-            let $infoScreen = $('<div>');
-            $infoScreen.attr('class', 'row');
-            $infoScreen.attr('id', 'infoScreen');
+        $('#content').append($shows);
+    }
+    function generateInfoScreen(show) {
 
-            let $title = $('<h1>');
-            $title.attr('class', 'col-12');
-            $title.text(show.name);
+        let $infoScreen = $('<div>');
+        $infoScreen.attr('class', 'row');
+        $infoScreen.attr('id', 'infoScreen');
 
-            $infoScreen.append($title);
+        let $title = $('<h1>');
+        $title.attr('class', 'col-12');
+        $title.text(show.name);
 
-            let $image = $('<img>');
-            $image.attr('class', 'col-6');
-            $image.attr('src', show.image);
+        $infoScreen.append($title);
 
-            $infoScreen.append($image);
+        let $image = $('<img>');
+        $image.attr('class', 'col-6');
+        $image.attr('src', show.image);
 
-
-            let $container = $('<div>');
-            $container.attr('class', 'col-6 row');
-
-            let $seasons = $('<div>');
-            $seasons.attr('class', 'col-12');
-            $seasons.append($('<span>').text(`Seasons (${show.seasons.length}):`));
-
-            for (let i = 0; i < show.seasons.length; i++) {
-                let $season = $('<li>');
-                $season.text(show.seasons[i]);
-
-                $seasons.append($season);
-            }
-
-            $container.append($seasons);
-
-            let $cast = $('<div>');
-            $cast.attr('class', 'col-12');
-            $cast.append($('<span>').text('Cast:'));
+        $infoScreen.append($image);
 
 
-            for (let i = 0; i < show.cast.length; i++) {
-                $actor = $('<li>');
-                $actor.text(show.cast[i]);
-                $cast.append($actor);
-            }
+        let $container = $('<div>');
+        $container.attr('class', 'col-6 row');
+
+        let $seasons = $('<div>');
+        $seasons.attr('class', 'col-12');
+        $seasons.append($('<span>').text(`Seasons (${show.seasons.length}):`));
+
+        for (let i = 0; i < show.seasons.length; i++) {
+            let $season = $('<li>');
+            $season.text(show.seasons[i]);
+
+            $seasons.append($season);
+        }
+
+        $container.append($seasons);
+
+        let $cast = $('<div>');
+        $cast.attr('class', 'col-12');
+        $cast.append($('<span>').text('Cast:'));
 
 
-            $container.append($cast);
+        for (let i = 0; i < show.cast.length; i++) {
+            $actor = $('<li>');
+            $actor.text(show.cast[i]);
+            $cast.append($actor);
+        }
 
-            $infoScreen.append($container);
 
-            $summary = $(show.summary);
-            $summary.attr('class', 'col-12');
+        $container.append($cast);
 
-            $infoScreen.append($summary);
+        $infoScreen.append($container);
 
-            $content.html('');
-            $content.append($infoScreen);
+        $summary = $(show.summary);
+        $summary.attr('class', 'col-12');
 
-        });
+        $infoScreen.append($summary);
+
+        $content.html('');
+        $content.append($infoScreen);
 
     }
 
     $searchInput = $('#search');
     $searchBar = $('#searchBar');
+
+    $dropdown = $('#dropdown');
+
+    function createDropdown(showList) {
+        for (let i = 0; i < showList.length; i++) {
+            $dropdown.append(generateInfoScreen(showList[i]));
+        }
+    }
 
     function generateSearchDropdownItem(show) {
 
@@ -106,6 +122,8 @@ const uiModule = (function () {
         createShowElement,
         collectSearchValue,
         generateInfoScreen,
-        generateSearchDropdownItem
+        generateSearchDropdownItem,
+        createShowScreen,
+        createDropdown
     }
 })()
