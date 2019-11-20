@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+#shows {
+  width: 900px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.show {
+  width: 30%; }
+
+.show img {
+  /* display: block;*/
+  /*  width: 80%; */
+  margin: 2rem auto; }
+
+/*# sourceMappingURL=main.css.map */
