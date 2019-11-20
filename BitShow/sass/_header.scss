@@ -1,0 +1,65 @@
+
+
+header{
+    height: 5em;
+    background-color: $headerColor;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+footer{
+    height: 5em;
+    background-color: $headerColor;   
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer p{
+    color: white;
+    line-height: 5em;
+    text-align: center;
+}
+#headerContent{
+    width: $contentWidth;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;    
+}
+#headerContent span{
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+#searchBar{
+    position: relative;
+    margin-top: 1.1em;
+}
+#dropdown{
+    position: absolute;
+    top: 2em;
+}
+.dropDownItem{
+    list-style: none;
+    height: 2em;
+    line-height: 2em;
+    background: burlywood;   
+    background: white;
+    border-bottom: 2px solid $headerColor;
+    width: 250px;
+    cursor: pointer;
+}
+#search{
+    border: none;
+    outline: none;
+    padding: 0.4em;
+    border-radius: 2px;
+    width: 250px;
+}
+#infoScreen span{
+    font-weight: bold;
+    font-size: 1.4em;
+}
+#infoScreen p{
+    margin: 3em 0;
+}

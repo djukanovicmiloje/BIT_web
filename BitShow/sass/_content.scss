@@ -1,0 +1,25 @@
+#content{
+    margin: 5em 0;
+}
+#shows{
+    width: $contentWidth;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 100;
+}
+.show{
+    width: 30%;
+    margin-top: 2rem;
+}
+
+#infoScreen{
+    width: $contentWidth;
+    margin: auto;
+    z-index: 100;
+}
+#infoScreen h1{
+    text-align: center;
+    padding: 1em;
+}
