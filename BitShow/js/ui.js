@@ -21,13 +21,18 @@ const uiModule = (function () {
         return $show;
 
     }
+
+    function getShowCards() {
+        return $('.show');
+    }
+
     function createShowScreen(showList) {
         $shows = $('<div>');
         $shows.attr('id', 'shows');
 
         for (let i = 0; i < showList.length; i++) {
             let $show = createShowElement(showList[i]);
-            $show.attr('id', `${showList[i].id}`);
+            $show.attr('data-showID', `${showList[i].id}`);
             $shows.append($show);
         }
 
@@ -101,7 +106,9 @@ const uiModule = (function () {
 
     function createDropdown(showList) {
         for (let i = 0; i < showList.length; i++) {
-            $dropdown.append(generateInfoScreen(showList[i]));
+            $item = generateSearchDropdownItem(showList[i]);
+            $item.data('showID', showList[i].id);
+            $dropdown.append($item);
         }
     }
 
@@ -117,13 +124,17 @@ const uiModule = (function () {
     function collectSearchValue() {
         return $searchInput.val();
     }
-
+    function removeDropDown() {
+        $dropdown.html('');
+    }
     return {
         createShowElement,
         collectSearchValue,
         generateInfoScreen,
         generateSearchDropdownItem,
         createShowScreen,
-        createDropdown
+        createDropdown,
+        removeDropDown,
+        getShowCards
     }
 })()

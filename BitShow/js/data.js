@@ -36,27 +36,26 @@ const dataModule = (function () {
         })
     }
 
-    function fetchAShow(id, onLoad) { //BY ID      
+    function fetchAShow(id, onLoad) {
 
-        $.get(`http://api.tvmaze.com/shows/${id}`, function (showData) {
+        $.get(`http://api.tvmaze.com/shows/${id}?embed[]=seasons&embed[]=cast`, function (showData) {
             let name = showData.name;
             let image = showData.image;
             let summary = showData.summary;
-            $.get(`http://api.tvmaze.com/shows/${id}/cast`, function (castData) {
-                let cast = [];
-                for (let i = 0; i < castData.length; i++) {
-                    cast.push(castData[i].person.name);
-                }
-                $.get(`http://api.tvmaze.com/shows/${id}/seasons`, function (seasonsData) {
-                    let seasons = [];
-                    for (let i = 0; i < seasonsData.length; i++) {
-                        seasons.push(seasonsData[i].premiereDate + " - " + seasonsData[i].endDate);
-                    }
-                    let show = new Show(id, name, image, 0, summary, seasons, cast);
-                    onLoad(show);
-                })
-            })
+            let cast = [];
+            let castData = showData._embedded.cast;
+            for (let i = 0; i < castData.length; i++) {
+                cast.push(castData[i].person.name);
+            }
+            let seasons = [];
+            let seasonsData = showData._embedded.seasons;
+            for (let i = 0; i < seasonsData.length; i++) {
+                seasons.push(seasonsData[i].premiereDate + " - " + seasonsData[i].endDate);
+            }
+            let show = new Show(id, name, image, 0, summary, seasons, cast);
+            onLoad(show);
         })
+
     }
 
     function sortByPopularity(showList) {
