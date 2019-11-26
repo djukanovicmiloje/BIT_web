@@ -6,11 +6,11 @@ const dataModule = (function () {
         this.image = image ? image.medium : null;
         this.rating = rating.average;
         this.summary = summary;
-        this.seasons = seasons; //arr of str       
-        this.cast = cast;  //arr
+        this.seasons = seasons;       
+        this.cast = cast;  
 
     }
-    function fetchShows(number, onLoad, query) {  //SET NUMBER OF SHOWS
+    function fetchShows(number, onLoad, query) {  
 
         let url = query ? `http://api.tvmaze.com/search/shows?q=${query}` : 'http://api.tvmaze.com/shows';
 
@@ -31,12 +31,11 @@ const dataModule = (function () {
                     showList.push(show);
                 }
             }
-
             onLoad(showList);
         })
     }
 
-    function fetchAShow(id, onLoad) {
+    function fetchSingleShow(id, onLoad) {
 
         $.get(`http://api.tvmaze.com/shows/${id}?embed[]=seasons&embed[]=cast`, function (showData) {
             let name = showData.name;
@@ -60,15 +59,13 @@ const dataModule = (function () {
 
     function sortByPopularity(showList) {
         let sorted = showList.sort(function (show1, show2) {
-
             return show2.rating.average - show1.rating.average;
         })
-
         showList = sorted;
     }
 
     return {
         fetchShows,
-        fetchAShow
+        fetchSingleShow
     }
 })()

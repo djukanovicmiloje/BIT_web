@@ -2,8 +2,7 @@ const uiModule = (function () {
 
     $content = $('#content');
 
-    function createShowElement(show) {
-        $parent = $('#shows');
+    function createShowElement(show) {        
 
         let $show = $('<div>');
         $show.addClass('show');
@@ -14,9 +13,7 @@ const uiModule = (function () {
 
         let $title = $('<h2>');
         $title.text(show.name);
-        $show.append($title);
-
-        $parent.append($show);
+        $show.append($title);        
 
         return $show;
 
@@ -32,12 +29,13 @@ const uiModule = (function () {
 
         for (let i = 0; i < showList.length; i++) {
             let $show = createShowElement(showList[i]);
-            $show.attr('data-showID', `${showList[i].id}`);
+            $show.attr('data-showID', showList[i].id);
             $shows.append($show);
         }
 
         $('#content').append($shows);
     }
+
     function generateInfoScreen(show) {
 
         let $infoScreen = $('<div>');
@@ -55,7 +53,6 @@ const uiModule = (function () {
         $image.attr('src', show.image);
 
         $infoScreen.append($image);
-
 
         let $container = $('<div>');
         $container.attr('class', 'col-6 row');
@@ -77,13 +74,11 @@ const uiModule = (function () {
         $cast.attr('class', 'col-12');
         $cast.append($('<span>').text('Cast:'));
 
-
         for (let i = 0; i < show.cast.length; i++) {
             $actor = $('<li>');
             $actor.text(show.cast[i]);
             $cast.append($actor);
         }
-
 
         $container.append($cast);
 
@@ -96,22 +91,20 @@ const uiModule = (function () {
 
         $content.html('');
         $content.append($infoScreen);
-
     }
 
     $searchInput = $('#search');
     $searchBar = $('#searchBar');
-
     $dropdown = $('#dropdown');
 
-    function createDropdown(showList) {
-        for (let i = 0; i < showList.length; i++) {
-            $item = generateSearchDropdownItem(showList[i]);
-            $item.data('showID', showList[i].id);
-            $dropdown.append($item);
-        }
+    function collectSearchValue() {
+        return $searchInput.val();
     }
 
+    function getSearchBar(){
+        return $searchBar;
+    }
+    
     function generateSearchDropdownItem(show) {
 
         let $show = $('<li>');
@@ -121,20 +114,31 @@ const uiModule = (function () {
         return $show;
     }
 
-    function collectSearchValue() {
-        return $searchInput.val();
+    function getDropdownItems(){
+        return $('.dropDownItem');
     }
+
+    function createDropdown(showList) {
+        $dropdown.html('');
+        for (let i = 0; i < showList.length; i++) {
+            $item = generateSearchDropdownItem(showList[i]);
+            $item.attr('data-showID', showList[i].id);
+            $dropdown.append($item);
+        }
+    }
+
     function removeDropDown() {
         $dropdown.html('');
     }
-    return {
-        createShowElement,
+
+    return {        
         collectSearchValue,
-        generateInfoScreen,
-        generateSearchDropdownItem,
+        generateInfoScreen,        
         createShowScreen,
         createDropdown,
         removeDropDown,
-        getShowCards
+        getShowCards,
+        getDropdownItems,
+        getSearchBar
     }
 })()
